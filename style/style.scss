@@ -1,0 +1,638 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Finlandica:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital@1&family=Lekton&display=swap');
+
+.carrois {
+    font-family: 'Carrois Gothic',sans-serif;
+}
+
+
+.colorselect::selection {
+    color: white;
+    background-color: red;
+}
+
+.first-screen {
+    height: 100vh;
+}
+
+body {
+    display: block;
+    margin: 0;
+    background: url(https://149357172.v2.pressablecdn.com/wp-content/uploads/2017/07/slide-1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.head-container {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+}
+
+.head-container-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px rgba(185, 185, 185, 0.24);
+    height: 100px;
+    padding: 0 40px 0 40px;
+    transition: background 1s ease-in-out;
+    &.red {
+        background-color: #312649;
+        opacity: .9;
+      }
+}
+
+.logo {
+    text-transform: uppercase;
+    color: #fff;
+    height: 30px;
+    width: 100px;
+    content: url(https://149357172.v2.pressablecdn.com/wp-content/themes/onzo-progression/images/logo.png);
+    cursor: pointer;
+}
+
+.nav {
+    font-family: 'Carrois Gothic',sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    padding: 0 28% 0 28%;
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        position: relative;
+        white-space: nowrap;
+        
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &::after {
+            content: "";
+            background: red;
+            position: absolute;
+            bottom: 0;
+            height: 5px;
+            width: 0%;
+            transition: all .3s ease;
+            border-radius: 5px 5px 0 0;
+        }
+
+        > a {
+            text-transform: uppercase;
+            transition: all .3s;
+        }
+
+        a {
+            color: rgb(255, 255, 255, 0.8);            
+            font-weight: bold;            
+            font-size: 14px;           
+        }
+
+        ul {
+            position: fixed;
+            visibility: hidden;
+            opacity: 0;
+            list-style: none;
+            padding-left: 0;
+            transition: visibility .3s ease-in-out, opacity .5s ease-in-out;
+            top: 85px;
+            box-shadow: 0px 0px 10px rgb(92, 92, 92);
+
+            li {
+                margin-top: 20px;
+                background: white;
+                padding: 10px;
+                border-radius: 5px;
+                transition: all .3s;
+    
+                &:not(:last-child){
+                    border-bottom: solid 1px rgb(214, 214, 214);   
+                }
+                
+                a {
+                    color: rgb(131, 131, 131);
+                    font-weight: 400;
+                    font-family: 'Carrois Gothic',sans-serif;   
+                    
+                    transition: all .3s;
+                    
+                    &:hover  {
+                        color: black;
+                    }                 
+                }
+            }
+          } 
+
+        &:hover ul{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &:hover li{
+            margin-top: 0;
+        }
+    }
+}
+
+.main-right-button {
+    cursor: pointer;
+    height: 40px;
+    background-color: rgb(255,27,24);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.8s ease;
+    padding: 0px;
+    white-space: nowrap;
+
+    a {
+        color: #fff;
+    }
+    
+    &:hover {
+        background-color: rgb(209, 17, 16);
+    }
+
+    .right-side {
+        background: #000;
+        border-left: solid 1px rgba(187, 187, 187, 0.2);
+        border-radius: 0  25px 25px 0;
+        padding: 13px 13px 13px 10px;
+        margin-left: 15px 0;
+        background-color: rgb(0,0,0,0.2);
+    }
+
+    .triangle {
+        position: absolute;
+        border: 5px solid transparent;
+        border-color: transparent transparent transparent white;
+        margin: 3px 10px;
+        
+    }
+}
+
+.second-screen {
+
+    height: 100vh;
+
+    .back-picture-red {
+        margin-bottom: 120px;
+        background-image: url("https://149357172.v2.pressablecdn.com/wp-content/uploads/2017/07/bike-image.jpg");
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .back-picture-red-titleone {
+            padding-top: 100px;
+            font-size: 20px;
+            color: black;
+            &::selection {
+                padding: 30px;
+                color: white;
+                background-color: rgb(149, 149, 255);// #ff989733;
+            }
+        }
+        
+        .back-picture-red-titletwo {
+            font-size: 76px;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            &::selection {
+                color: white;
+                background-color: rgb(136, 136, 255);
+            }
+        }
+    }
+
+    .container-starter-road-pro {
+        margin-top: -190px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 190px;
+        text-align: center;
+
+        .starter-road-pro {
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            vertical-align: middle;
+            
+            &:not(:first-child){
+                border-left: solid 1px rgb(77, 77, 77);
+            }
+            
+            &:hover a {
+                animation: 3s starter-road-pro-change-bright infinite;
+            }
+
+            > a {
+                position: absolute;
+                color: white;
+                font-family: 'Carrois Gothic',sans-serif;
+                cursor: pointer;   
+                font-size: 50px;
+                letter-spacing: 2px;
+                user-select: none;
+                transition: .3s ease-in-out;
+
+                @keyframes starter-road-pro-change-bright {
+                    0%, 100% {
+                        font-size: 50px;
+                    }
+                  
+                    50% {
+                        font-size: 53px;
+                    }
+                  }
+            }
+        }
+    }
+}
+
+.third-screen {
+        height: 100vh;
+
+    .back-picture-third {
+        background-image: url("https://149357172.v2.pressablecdn.com/wp-content/uploads/2017/07/feature-image.jpg");
+        background-size: cover;
+        margin-top: 200px;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        .main-container-third-screen {
+            display: flex;
+            flex-direction: column;
+
+            padding-top: 20px;
+            padding-left: 5%;
+            padding-right: 26%;
+            
+            .container-heading-title-third-screen {
+
+                font-family: 'Carrois Gothic',sans-serif;
+                font-size: 60px;
+                font-weight: 700;
+                font-style: italic;
+                letter-spacing: -1.5px;
+                color: #0F0F10;
+            }
+
+            .container-columns-third-screen {
+                display: flex;
+                
+                .container-rows-third-screen {
+
+                    width: 100%;
+                    height: 50px;
+                    flex-grow: 1;
+
+                    .container-row-third-screen {
+                        i {
+                            position: absolute;
+                            font-size: 30px;
+                            margin-left: -50px;
+                        }
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 50px;
+                        padding-bottom: 10px;
+            
+                        .row-third-title {
+                            font-size: 22px;
+                            // margin-bottom: 8px;
+                            font-family: 'Carrois Gothic', sans-serif;
+                            color: #0F0F10;
+
+
+                        }
+            
+                        .row-third-content {
+                            color: #7a7a7a;
+                            font-family: "Open Sans", sans-serif;
+                            font-size: 16px;
+                            line-height: 28px; // отступы
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.fourth-screen {
+    height: 100vh;
+    background-color: #09041D;
+    box-sizing: content-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main-container-fourth-screen {
+        // border: solid 10px white;
+    
+        .container-fourth-screen {
+            display: flex;
+            justify-content: center;
+            // border: solid 5px rgba(22, 255, 1, 0.836);
+        }
+        
+        .title-one {
+            font-size: 22px;
+            font-family: "Carrois Gothic", sans-serif;
+            color: #ff1816;
+            padding-top: 35px;
+            letter-spacing: 2px;
+        }
+    
+        .title-two {
+            font-size: 65px;
+            font-family: 'Carrois Gothic', sans-serif;
+            color: white;
+            font-style: italic;
+            font-weight: bold;
+            padding-top: 20px;
+            letter-spacing: -1px;
+            padding-bottom: 20px;
+        }
+        
+        .container-pictures-fourth-screen {
+            display: flex;
+
+            .inner-container-pictures-fourth-screen {
+                flex-grow: 1;
+                max-width: 360px;
+                max-height: 360px;
+                min-width: 100px;
+                min-height: 100px;
+                border-radius: 50%;
+            }
+    
+            .picture-fourth-screen {
+                margin: 10px;
+                transition: .5s;
+                
+                .picture-fourth-screen-pic {
+                    border-radius: 50%;
+                    transition: .5s;
+
+                    &:hover {
+                        border-radius: 5%;
+                      }
+                }
+
+                img {
+                    max-width: 100%;
+                    object-fit: cover;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+                
+
+            }       
+        }
+    }
+}
+
+
+.thelast-screen-and-footer {
+    text-align: center;
+    background-image: url('https://149357172.v2.pressablecdn.com/wp-content/uploads/2017/07/review-bg.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 180px;
+    
+    .thelast-screen-and-footer-title-one {
+        color: #ff1816;
+        font-weight: 400;
+        font-size: 22px;
+        padding-top: 65px;
+        letter-spacing: 2px;
+    }
+
+    .thelast-screen-and-footer-title-two {
+        font-style: italic;
+        font-size: 60px;
+        margin: 25px;
+    }
+ 
+    .container-thelast-screen-and-footer {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 200px;
+        width: 100%;
+
+        .review-thelast-screen-and-footer {
+            width: 374px;
+            height: 374px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px rgba(97, 97, 97, 0.2);
+            background-color: rgba(255, 255, 255, 0.8);
+
+            &:not(:first-child){
+                margin-left: 30px;
+            }
+
+            .inner-box-of-review {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                text-align: start;
+                padding: 50px 30px 50px 30px;
+
+                img {
+                    width: 119px;
+                    height: 23px;
+                }
+
+                .inner-box-of-review-message {
+                    padding-top: 30px;
+                    font-size: 17px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: italic;
+                    color:rgb(75, 75, 75);
+                    line-height: 28px;
+                }
+
+                .inner-box-of-review-details {
+                    display: flex;
+                    .inner-box-of-review-details-face {
+                        img {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .inner-box-of-review-details-nameandjob {
+                        text-align: start;
+
+                        .inner-box-of-review-details-name {
+                            padding: 5px 0 0px 10px;
+                            font-size: 22px;
+                            color: #FF1816;
+                            font-family: 'Lekton', sans-serif;
+                            font-weight: 700;
+                        }
+
+                        .inner-box-of-review-details-job {
+                            padding: 0 0 50px 10px;
+                            font-size: 15px;
+                            color: #A8A8A8;
+                            font-family: 'Lekton', sans-serif;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-footer {
+        background: #140a29;
+        height: auto;
+        color: white;
+        padding: 50px 50px 0 50px;
+        margin-top: -100px;
+        .main-footer-info {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            padding: 0 0 50px;
+            border-bottom: solid 1px rgba(111, 119, 133, 0.288);
+
+            .main-footer-info-about-title {
+                font-weight: 400;
+                display: flex;
+                left: auto;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 30px;
+                    height: 3px;
+                    margin-top: 30px;
+                    background: rgba(255,255,255,0.3);
+                }
+            }
+
+            .main-footer-info-about {
+                width: 25%;
+               
+                .main-footer-info-about-par {
+                    font-family: 'Open sans', sans-serif;
+                    line-height: 28px;
+                    font-size: 15px;
+                    color: #7e7b88;
+                }              
+            }
+    
+            .main-footer-info-recent {
+                width: 25%;
+                
+                li {
+                    &::before{
+                        margin-right: 15px;
+                        content: '\f1ea';
+                        font-family: FontAwesome;
+                        margin-left: -30px;
+                    }
+                    list-style-type: none;
+                    padding: 10px 0 10px 0;
+                    > a {                      
+                        cursor: pointer;
+                        color: #b1afb4;
+                        transition: .3s ease;
+                        font-size: 15px;
+                        font-family: 'Open Sans', sans-serif;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+
+                    > span {
+                        color: #7e7b88;
+                        font-size: 13.5px;
+                        font-family: 'Open Sans', sans-serif;
+                    }
+                }
+            }
+    
+            .main-footer-info-instagram {
+                width: 25%; 
+
+                .main-footer-info-instagram-photoes {
+                    
+                    img {
+                        padding: 5px;
+                        width: 140px;
+                        height: 140px;
+                    }
+                }
+            }
+        }
+
+        .main-footer-rights-and-menu {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 0 25px 0;
+            .footer-rights {
+                color: #7a7a7a;
+                font-family: "Open Sans", sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+            }
+            .footer-menu {
+                display: flex;
+                list-style-type: none;
+                font-family: "Open Sans", sans-serif;
+                font-size: 12px;
+                color: #7a7a7a;
+
+                .footer-nav {
+                    transition: .5s;
+                    cursor: pointer;
+
+                    &:not(:last-child) {
+                        padding-right: 30px;
+                    }
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

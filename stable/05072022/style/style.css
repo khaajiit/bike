@@ -1,0 +1,102 @@
+body {
+  display: block;
+  margin: 0;
+  background: url(https://149357172.v2.pressablecdn.com/wp-content/uploads/2017/07/slide-1.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.head-container-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px rgba(185, 185, 185, 0.24);
+  height: 100px;
+  padding: 0 40px 0 40px;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: #fff;
+  height: 30px;
+  width: 100px;
+  content: url(https://149357172.v2.pressablecdn.com/wp-content/themes/onzo-progression/images/logo.png);
+  cursor: pointer;
+}
+
+.nav {
+  cursor: pointer;
+  display: flex;
+  font-family: "Carrois Gothic", sans-serif;
+}
+
+.li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  height: 100px;
+  transition: all 0.3s;
+}
+.li a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.li::after {
+  content: "";
+  position: relative;
+  top: 38px;
+  width: 0%;
+  border-bottom: solid 4px red;
+  transition: all 0.3s;
+  border-radius: 5px 5px 0 0;
+}
+.li:hover {
+  color: #fff;
+}
+.li:hover::after {
+  width: 100%;
+  border-bottom: solid 4px red;
+}
+.li ul {
+  display: none;
+}
+.li:hover ul {
+  text-decoration: none;
+  top: 85px;
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.main-right-button {
+  cursor: pointer;
+  height: 40px;
+  background-color: rgb(255, 27, 24);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.8s ease;
+  padding: 0px;
+}
+.main-right-button:hover {
+  background-color: rgb(209, 17, 16);
+}
+.main-right-button .right-side {
+  background: #000;
+  border-left: solid 1px rgba(187, 187, 187, 0.2);
+  border-radius: 0 25px 25px 0;
+  padding: 13px;
+  margin-left: 15px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.main-right-button .triangle {
+  position: absolute;
+  border: 5px solid transparent;
+  border-color: transparent transparent transparent white;
+  margin: 3px 10px;
+}/*# sourceMappingURL=style.css.map */
